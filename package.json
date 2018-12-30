@@ -1,0 +1,30 @@
+{
+  "name": "@draganfilipovic/html-elements-list",
+  "version": "1.0.0",
+  "description": "list all html elements",
+  "author": "Dragan Filipovic",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:easingthemes/html-elements-list.git"
+  },
+  "keywords": [
+    "html",
+    "elements",
+    "dom"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "debug": "node $NODE_DEBUG_OPTION ./examples"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0"
+  },
+  "dependencies": {
+    "find-in-files": "^0.5.0"
+  }
+}
