@@ -1,4 +1,5 @@
 const findInFiles = require('find-in-files');
+const validElements = require('./elements');
 
 const getHtmlElements = async (dirPath = process.cwd(), ext = '.html') => {
   let searchResults = {};
@@ -19,8 +20,10 @@ const getHtmlElements = async (dirPath = process.cwd(), ext = '.html') => {
 
     for (let i = 0; i < matches.length; i++) {
       const el = matches[i];
-      elements[el] = (elements[el] || 0) + 1;
-      statistic.total[el] = (statistic.total[el] || 0) + 1;
+      if (validElements.indexOf(el) > -1) {
+        elements[el] = (elements[el] || 0) + 1;
+        statistic.total[el] = (statistic.total[el] || 0) + 1;
+      }
     }
 
     statistic.files[filename] = elements;
